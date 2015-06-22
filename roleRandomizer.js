@@ -84,5 +84,5 @@ function randGroup(fact,group)
 function randomizeRoles()
 {
   rolelist.push(randFaction("Town"));
-  return rolelist.join("\n");
+  return rolelist.join("<br>");
 }

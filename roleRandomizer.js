@@ -20,13 +20,175 @@ roles=[
   {
     "name":"Investigator",
     "faction":"Town",
-    "group":"Investigative",
+    "group":"Investigative"
   },
   {
     "name":"Lookout",
     "faction":"Town",
+    "group":"Investigative"
+  },
+  {
+    "name":"Spy",
+    "faction":"Town",
     "group":"Investigative",
-  }
+    "disable":true // Experimental role
+  },
+  {
+    "name":"Vigilante",
+    "faction":"Town",
+    "group":"Killing"
+  },
+  {
+    "name":"Veteran",
+    "faction":"Town",
+    "group":"Killing",
+    "unique":true
+  },
+  {
+    "name":"Doctor",
+    "faction":"Town",
+    "group":"Protective"
+  },
+  {
+    "name":"Bodyguard",
+    "faction":"Town",
+    "group":"Protective"
+  },
+  {
+    "name":"Marshal",
+    "faction":"Town",
+    "group":"Protective",
+    "disable":true // Experimental role
+  },
+  {
+    "name":"Escort",
+    "faction":"Town",
+    "group":"Support"
+  },
+  {
+    "name":"Transporter",
+    "faction":"Town",
+    "group":"Support",
+    "unique":true
+  },
+  {
+    "name":"Retributionist",
+    "faction":"Town",
+    "group":"Power",
+    "unique":true
+  },
+  {
+    "name":"Medium",
+    "faction":"Town",
+    "group":"Support"
+  },
+  {
+    "name":"Jailor",
+    "faction":"Town",
+    "group":"Power",
+    "unique":true
+  },
+  {
+    "name":"Lawyer",
+    "faction":"Town",
+    "group":"Power",
+    "unique":true,
+    "disable":true // Experimental role
+  },
+  {
+    "name":"Godfather",
+    "faction":"Mafia",
+    "group":"Killing",
+    "unique":true
+  },
+  {
+    "name":"Mafioso",
+    "faction":"Mafia",
+    "group":"Killing",
+    "unique":true
+  },
+  {
+    "name":"Framer",
+    "faction":"Mafia",
+    "group":"Deception"
+  },
+  {
+    "name":"Consort",
+    "faction":"Mafia",
+    "group":"Support"
+  },
+  {
+    "name":"Agent",
+    "faction":"Mafia",
+    "group":"Support",
+    "disable":true // Experimental role
+  },
+  {
+    "name":"Consigliere",
+    "faction":"Mafia",
+    "group":"Support"
+  },
+  {
+    "name":"Janitor",
+    "faction":"Mafia",
+    "group":"Deception"
+  },
+  {
+    "name":"Disguiser",
+    "faction":"Mafia",
+    "group":"Deception",
+    "disable":true // Experimental role
+  },
+  {
+    "name":"Serial Killer",
+    "faction":"Neutral",
+    "group":"Killing"
+  },
+  {
+    "name":"Arsonist",
+    "faction":"Neutral",
+    "group":"Killing"
+  },
+  {
+    "name":"Executioner",
+    "faction":"Neutral",
+    "group":"Evil"
+  },
+  {
+    "name":"Jester",
+    "faction":"Neutral",
+    "group":"Evil"
+  },
+  {
+    "name":"Survivor",
+    "faction":"Neutral",
+    "group":"Benign"
+  },
+  {
+    "name":"Witch",
+    "faction":"Neutral",
+    "group":"Evil"
+  },
+  {
+    "name":"Amnesiac",
+    "faction":"Neutral",
+    "group":"Benign"
+  },
+  {
+    "name":"Stalker",
+    "faction":"Neutral",
+    "group":"Killing"
+  },
+  {
+    "name":"Phantom",
+    "faction":"Neutral",
+    "group":"Benign"
+  },
+  {
+    "name":"Bomber",
+    "faction":"Neutral",
+    "group":"Killing"
+  },
 ];
 rolelist=[];
 function randFromArray(arr)
@@ -42,7 +204,7 @@ function randFaction(fact)
   var arr=[];
   for(var i=0;i<roles.length;i++)
   {
-    if(roles[i].faction==fact&&(rolelist.indexOf(roles[i].name)===-1||!roles[i].unique))
+    if(roles[i].faction==fact&&(rolelist.indexOf(roles[i].name)===-1||!roles[i].unique)&&!roles[i].disable)
     {
       if(roles[i].counts)
       {
@@ -64,7 +226,7 @@ function randGroup(fact,group)
   var arr=[];
   for(var i=0;i<roles.length;i++)
   {
-    if(roles[i].faction==fact&&roles[i].group==group&&(rolelist.indexOf(roles[i].name)===-1||!roles[i].unique))
+    if(roles[i].faction==fact&&roles[i].group==group&&(rolelist.indexOf(roles[i].name)===-1||!roles[i].unique)&&!roles[i].disable)
     {
       if(roles[i].counts)
       {

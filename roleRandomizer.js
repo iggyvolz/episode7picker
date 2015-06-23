@@ -1,4 +1,4 @@
-citCounts=1;
+citCounts=10;
 roles=[
   {
     "name":"Citizen",

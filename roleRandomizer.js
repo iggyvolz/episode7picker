@@ -245,9 +245,25 @@ function randGroup(fact,group)
 }
 function randomizeRoles()
 {
-  for(i=0;i<15;i++)
-  {
-    rolelist.push(randFaction("Town"));
-  }
+  rolelist.push(randGroup("Town","Protective"));
+  rolelist.push(randGroup("Town","Protective"));
+  rolelist.push(randGroup("Town","Killing"));
+  rolelist.push(randGroup("Town","Killing"));
+  rolelist.push(randGroup("Town","Investigative"));
+  rolelist.push(randGroup("Town","Investigative"));
+  rolelist.push(randGroup("Town","Support"));
+  rolelist.push(randGroup("Town","Support"));
+  rolelist.push(randAlignment("Town"));
+  rolelist.push(randAlignment("Town"));
+  rolelist.push(randAlignment("Town"));
+  rolelist.push(randAlignment("Town"));
+  rolelist.push("Godfather");
+  rolelist.push("Mafioso");
+  rolelist.push(randGroup("Mafia","Deception"));
+  rolelist.push(randGroup("Mafia","Support"));
+  rolelist.push(randGroup("Neutral","Killing"));
+  rolelist.push(randGroup("Neutral","Benign"));
+  rolelist.push(randGroup("Neutral","Evil"));
+  rolelist.push(randAlignment("Neutral"));
   return rolelist.join("<br>");
 }

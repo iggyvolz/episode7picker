@@ -253,7 +253,7 @@ function randomizeRoles()
   rolelist.push(randGroup("Town","Investigative"));
   rolelist.push(randGroup("Town","Support"));
   rolelist.push(randGroup("Town","Support"));
-  rolelist.push(randFaction("Town"));
+  rolelist.push(randGroup("Town","Power"));
   rolelist.push(randFaction("Town"));
   rolelist.push(randFaction("Town"));
   rolelist.push(randFaction("Town"));

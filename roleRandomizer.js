@@ -253,10 +253,10 @@ function randomizeRoles()
   rolelist.push(randGroup("Town","Investigative"));
   rolelist.push(randGroup("Town","Support"));
   rolelist.push(randGroup("Town","Support"));
-  rolelist.push(randAlignment("Town"));
-  rolelist.push(randAlignment("Town"));
-  rolelist.push(randAlignment("Town"));
-  rolelist.push(randAlignment("Town"));
+  rolelist.push(randFaction("Town"));
+  rolelist.push(randFaction("Town"));
+  rolelist.push(randFaction("Town"));
+  rolelist.push(randFaction("Town"));
   rolelist.push("Godfather");
   rolelist.push("Mafioso");
   rolelist.push(randGroup("Mafia","Deception"));
@@ -264,6 +264,6 @@ function randomizeRoles()
   rolelist.push(randGroup("Neutral","Killing"));
   rolelist.push(randGroup("Neutral","Benign"));
   rolelist.push(randGroup("Neutral","Evil"));
-  rolelist.push(randAlignment("Neutral"));
+  rolelist.push(randFaction("Neutral"));
   return rolelist.join("<br>");
 }
